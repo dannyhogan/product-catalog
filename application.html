@@ -12,16 +12,16 @@
         <h1>Want to sell us your snowboard?</h1>
         <h3>Post it for sale using the form below!</h3>
     </header>
-    <form id="form">
+    <form id="board-form">
         <section>
             <p>
-                <label for="product-name">What brand is your snowboard? </label>
-                <input id="product-name" name="product-name">
+                <label for="boardBrand">What brand is your snowboard? </label>
+                <input id="boardBrand" name="boardBrand">
             </p>
         </section>   
         <section>
-            <label for="age-group">What type of snowboard is it?</label>
-            <select id="age-group">
+            <label for="boardType">What type of snowboard is it?</label>
+            <select id="boardType" name="boardType">
                 <option value="" hidden disabled selected>Select your board type.</option>
                 <option>Camber</option>
                 <option>Rocker</option>
@@ -29,14 +29,14 @@
         </section>
         <section>
             <p>
-                <label for="product-description">What length is your board?</label>
-                <input id="product-description" name="product-description" placeholder="Length in cm.">
+                <label for="boardLength">What length is your board?</label>
+                <input type="number" id="boardLength" name="boardLength" placeholder="Length in cm.">
             </p>
         </section>
         <section>
-            <label for="age-group">How many years have you owned it?</label>
-            <select id="age-group">
-                <option value="" hidden disabled selected>Select a length.</option>
+            <label for="boardAge">How old is the board?</label>
+            <select id="boardAge" name="boardAge">
+                <option value="" hidden disabled selected>Age in years.</option>
                 <option>Less than 1 year</option>
                 <option>1+</option>
                 <option>3+</option>
@@ -49,10 +49,10 @@
                 <legend>Are you selling your bindings too?</legend>
 
                 <label for="yes">Yes</label>
-                <input type="radio" id="yes" value="yes" name="bindings">
+                <input type="radio" id="yes" value="yes" name="boardWithBindings">
 
                 <label for="no">No</label>
-                <input type="radio" id="no" value="no" name="bindings">
+                <input type="radio" id="no" value="no" name="boardWithBindings">
 
             </fieldset>
         </section>
