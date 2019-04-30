@@ -23,8 +23,6 @@ test('returns form details in an object based off form', assert => {
     formData.set('boardStyle', expected.boardStyle);
     formData.set('boardDescription', expected.boardDescription);
 
-    console.log(formData.boardBrand);
-
     const result = getBoard(formData);
 
     //assert
