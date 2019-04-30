@@ -12,7 +12,7 @@
         <h1>Want to sell us your snowboard?</h1>
         <h3>Post it for sale using the form below!</h3>
     </header>
-    <form id="board-form">
+    <form id="boardForm">
         <section>
             <p>
                 <label for="boardBrand">What brand is your snowboard? </label>
@@ -57,7 +57,7 @@
             </fieldset>
         </section>
         <section>
-            <label for="board-quality">Rate the overall quality of your board:</label>
+            <label for="boardQuality">Rate the overall quality of your board:</label>
             <input type="range" min=1 max=10><p id="quality-display"></p>
         </section>
         <section>
@@ -65,13 +65,13 @@
                 <legend>What best describes your snowboard?</legend>
 
                 <label>Park Board</label>
-                <input type="checkbox">
+                <input type="checkbox" id="boardStyle" name="boardStyle" value="park">
                 
                 <label>Powder Board</label>
-                <input type="checkbox"><br>
+                <input type="checkbox" id="boardStyle" name="boardStyle" value="powder"><br>
                 
                 <label>All Mountain Board</label>
-                <input type="checkbox">
+                <input type="checkbox" id="boardStyle" name="boardStyle" value="allMountain">
             </fieldset>
         </section>
         <button>Submit your board!</button>
@@ -79,6 +79,6 @@
     <footer>
         <img src="./assets/mountains-vector-background-3.png">
     </footer>
-    <script src="./src/application.js"></script>
+    <script type="module" src="./src/application.js"></script>
 </body>
 </html>

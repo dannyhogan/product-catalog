@@ -1,6 +1,8 @@
-const form = document.getElementById('board-form');
+import getBoard from './getBoard.js';
+const form = document.getElementById('boardForm');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
-    console.log(form);
+    const formData = new FormData(form);
+    console.log(getBoard(formData));
 });
