@@ -16,7 +16,7 @@
         <section>
             <p>
                 <label for="boardBrand">What brand is your snowboard? </label>
-                <input id="boardBrand" name="boardBrand">
+                <input id="boardBrand" name="boardBrand" placeholder="ie. Burton, Arbor, Ride">
             </p>
         </section>   
         <section>
@@ -58,7 +58,7 @@
         </section>
         <section>
             <label for="boardQuality">Rate the overall quality of your board:</label>
-            <input type="range" min=1 max=10><p id="quality-display"></p>
+            <input id="boardQuality" name="boardQuality" type="range" min=1 max=10><p id="boardQualityLabel"></p>
         </section>
         <section>
             <fieldset>
@@ -73,6 +73,10 @@
                 <label>All Mountain Board</label>
                 <input type="checkbox" id="boardStyle" name="boardStyle" value="allMountain">
             </fieldset>
+        </section>
+        <section>
+            <label for="boardDescription">In a few words, describe your board.</label>
+            <textarea id="boardDescription" name="boardDescription"></textarea>
         </section>
         <button>Submit your board!</button>
     </form>
