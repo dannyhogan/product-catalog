@@ -9,7 +9,7 @@ body {
 form {
     border: 2px dotted white;
     border-radius: 25px;
-    margin: 0 30% 10% 30%;
+    margin: 0 30% 5% 30%;
     background-color: darkgrey;
     box-shadow: 5px 2.5px 20px black;
     z-index: 1;
@@ -33,18 +33,21 @@ h3 {
 }
 
 button {
-    padding: 10px;
+    padding: 5px;
     margin: 7.5px 0px;
     font-style: bold;
     background-color: #343539;
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
+    transition: .5s;
 }
 
 button:hover {
     background-color: white;
     border: 1px solid black;
     color: #343539;
+    box-shadow: 2.5px 2.5px 20px black;
+    transition: .5s;
 }
  
 
