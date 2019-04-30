@@ -8,6 +8,7 @@ test('returns form details in an object based off form', assert => {
         boardType: 'Rocker',
         boardLength: '164',
         boardWithBindings: true,
+        boardQuality: 10,
         boardStyle: 'Rocker',
         boardDescription: ''
     };
@@ -18,6 +19,7 @@ test('returns form details in an object based off form', assert => {
     formData.set('boardType', expected.boardType);
     formData.set('boardLength', expected.boardLength);
     formData.set('boardWithBindings', 'yes');
+    formData.set('boardQuality', 10);
     formData.set('boardStyle', expected.boardStyle);
     formData.set('boardDescription', expected.boardDescription);
 
