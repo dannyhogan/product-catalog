@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sell Your Snowboard!</title>
+    <link rel="stylesheet" href="./src/application-styles.css">
+</head>
+<body>
+    <header>
+        <h1>Want to sell us your snowboard?</h1>
+        <h3>Post it for sale using the form below!</h3>
+    </header>
+    <form id="form">
+        <p>
+            <label for="product-name">What brand is your snowboard? </label>
+            <input id="product-name" name="product-name">
+        </p>
+        <section>
+            <label for="age-group">What type of snowboard is it?</label>
+            <select id="age-group">
+                <option value="" hidden disabled selected>Select your board type.</option>
+                <option>Camber</option>
+                <option>Rocker</option>
+            </select>
+        </section>
+        <section>
+            <p>
+                <label for="product-description">What length is your board?</label>
+                <input id="product-description" name="product-description" placeholder="Length in cm.">
+            </p>
+        </section>
+        <section>
+            <label for="age-group">How many years have you owned it?</label>
+            <select id="age-group">
+                <option value="" hidden disabled selected>Select a length.</option>
+                <option>Less than 1 year</option>
+                <option>1+</option>
+                <option>3+</option>
+                <option>5+</option>
+            </select>
+        </section>
+        <section> 
+            <fieldset>
+
+                <legend>Are you selling your bindings too?</legend>
+
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" value="yes" name="bindings">
+
+                <label for="no">No</label>
+                <input type="radio" id="no" value="no" name="bindings">
+
+            </fieldset>
+        </section>
+        <section>
+            <label for="board-quality">Rate the overall quality of your board:</label>
+            <input type="range" min=1 max=10><p id="quality-display"></p>
+        </section>
+        <section>
+            <fieldset>
+                <legend>What best describes your snowboard?</legend>
+
+                <label>Park Board</label>
+                <input type="checkbox">
+                
+                <label>Powder Board</label>
+                <input type="checkbox"><br>
+                
+                <label>All Mountain Board</label>
+                <input type="checkbox">
+            </fieldset>
+        </section>
+        <button>Submit your board!</button>
+    </form>
+    <script src="./src/application.js"></script>
+</body>
+</html>

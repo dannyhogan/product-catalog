@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+body {
+    text-align: center;
+    background-color: #343539;
+    font-family: Gugi;
+}
+
+form {
+    border: 2px dotted white;
+    margin: 0 25%;
+    background-color: darkgrey;
+    box-shadow: 5px 2.5px 20px black;
+}
+
+section {
+    margin: .5% 25% 0 25%;
+    padding: 10px;
+    text-shadow: #343539;
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    color: dimgray;
+    margin-top: -15px;
+}
+
+button {
+    padding: 10px;
+    margin: 15px 0 20px 0;
+    font-style: bold;
+    background-color: #343539;
+    color: white;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: #343539;
+}
+ 
+
+input {
+    background-color: white;
+}
+
+select {
+    background-color: #343539;
+    color: white;
+}
