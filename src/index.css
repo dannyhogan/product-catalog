@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
 section {
     background-color: darkgrey;
     align-content: center;
@@ -10,6 +12,7 @@ section {
 }
 
 button {
+    font-family: Gugi;
     font-size: 1em;
     color: white;
     background-color: #343539;
@@ -23,9 +26,9 @@ button:hover {
     border: 1px solid black;
 }
 
+
 #snowboard {
     width: 40%;
-    z-index: -1;
     margin: -225px 0 0 0;
     opacity: .5;
 }
