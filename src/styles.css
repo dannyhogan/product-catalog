@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+body {
+    text-align: center;
+    background-color: #343539;
+    font-family: Gugi;
+}
+
+h1 {
+    color: white;
+}
+
+#mountains {
+    opacity: .5;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -35px;
+    position: absolute;
+    z-index: -1;
+}
