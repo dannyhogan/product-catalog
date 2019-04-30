@@ -8,9 +8,10 @@ body {
 
 form {
     border: 2px dotted white;
-    margin: 0 25%;
+    margin: 0 30%;
     background-color: darkgrey;
     box-shadow: 5px 2.5px 20px black;
+    z-index: 12;
 }
 
 section {
@@ -51,4 +52,13 @@ input {
 select {
     background-color: #343539;
     color: white;
+}
+
+footer img {
+    position: absolute;
+    margin-top: -400px;
+    right: 0;
+    width: 105%;
+    z-index: -1;
+    opacity: .5;
 }
