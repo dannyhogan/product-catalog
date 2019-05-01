@@ -1,0 +1,29 @@
+dl {
+    display: grid;
+    grid-template-columns: max-content .25fr;
+    text-align: left;
+    justify-content: center;
+}
+
+dt {
+    border: 1px dotted white;
+    border-radius: 10px;
+    background-color: darkgrey;
+    opacity: .5;
+    padding: 10px;
+    margin: 2px;
+}
+
+dt:after {
+    content: ":"
+}
+
+dd {
+    color: white;
+    border: 1px dotted white;
+    border-radius: 10px;
+    background-color: darkgrey;
+    opacity: .5;
+    padding: 10px;
+    margin: 2px;
+}

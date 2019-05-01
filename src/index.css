@@ -36,3 +36,7 @@ button:hover {
 header {
     margin-top: 100px;
 }
+
+h1 {
+    background-image: url(../assets/snowboard.png);
+}
