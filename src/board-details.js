@@ -18,7 +18,12 @@ brand.textContent = snowboard.boardBrand;
 type.textContent = snowboard.boardType;
 length.textContent = snowboard.boardLength;
 age.textContent = snowboard.boardAge;
-bindings.textContent = snowboard.boardWithBindings;
+// Converts boardWithBindings from boolean to yes or no
+if(snowboard.boardWithBindings) {
+    bindings.textContent = 'Yes';
+} else {
+    bindings.textContent = 'No';
+}
 quality.textContent = snowboard.boardQuality;
 style.textContent = snowboard.boardStyle;
 description.textContent = snowboard.boardDescription;
