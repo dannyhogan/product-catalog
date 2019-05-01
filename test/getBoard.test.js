@@ -8,17 +8,20 @@ test('returns form details in an object based off form', assert => {
         boardBrand: 'Arbor',
         boardType: 'Rocker',
         boardLength: '164',
+        boardAge: '1+',
         boardWithBindings: true,
         boardQuality: 10,
         boardStyle: 'Rocker',
         boardDescription: ''
     };
 
+
     //act
     const formData = new FormData();
     formData.set('boardBrand', expected.boardBrand);
     formData.set('boardType', expected.boardType);
     formData.set('boardLength', expected.boardLength);
+    formData.set('boardAge', expected.boardAge);
     formData.set('boardWithBindings', 'yes');
     formData.set('boardQuality', 10);
     formData.set('boardStyle', expected.boardStyle);
