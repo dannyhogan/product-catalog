@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+button {
+    font-family: Gugi;
+    color: white;
+    padding: 20px;
+    background-color: darkgrey;
+    border: 1px solid white;
+}
+
+button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    box-shadow: 5px 5px 20px black;
+}
+
+section {
+    margin-top: 100px;
+}
