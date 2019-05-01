@@ -18,4 +18,5 @@ form.addEventListener('submit', event => {
     const formData = new FormData(form);
     const snowboard = getBoard(formData);
     snowboardsApi.save(snowboard);
+    window.location = './thank-you.html';
 });
