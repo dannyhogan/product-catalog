@@ -10,10 +10,10 @@ const quality = document.getElementById('quality');
 const style = document.getElementById('style');
 const description = document.getElementById('description');
 
-// Gets snowboard details from API and stores in variable.
+// Gets snowboard values from API and stores in object variable.
 const snowboard = snowboardsApi.get();
 
-// Sets values of DD elements equal to each object property
+// Sets text content the of DD elements equal to each object property value
 brand.textContent = snowboard.boardBrand;
 type.textContent = snowboard.boardType;
 length.textContent = snowboard.boardLength;

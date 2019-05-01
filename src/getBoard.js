@@ -3,7 +3,8 @@ function getBoard(formData) {
     const boardWithBindings = formData.get('boardWithBindings') === 'yes';
     const boardQuality = parseInt(formData.get('boardQuality'));
 
-    const boardEntry = {
+    // Creates an object based off the formData passed into the function
+    const boardDetails = {
         boardBrand: formData.get('boardBrand'),
         boardType: formData.get('boardType'),
         boardLength: formData.get('boardLength'),
@@ -13,7 +14,7 @@ function getBoard(formData) {
         boardStyle: formData.get('boardStyle'),
         boardDescription: formData.get('boardDescription')
     };
-    return boardEntry;
+    return boardDetails;
 }
 
 export default getBoard;
