@@ -7,6 +7,7 @@ function getBoard(formData) {
         boardBrand: formData.get('boardBrand'),
         boardType: formData.get('boardType'),
         boardLength: formData.get('boardLength'),
+        boardAge: formData.get('boardAge'),
         boardWithBindings: boardWithBindings,
         boardQuality: boardQuality,
         boardStyle: formData.get('boardStyle'),
