@@ -1,4 +1,5 @@
 import getBoard from './getBoard.js';
+import snowboardsApi from './snowboard-api.js';
 
 //Imports form from HTML.
 const form = document.getElementById('boardForm');
@@ -15,5 +16,6 @@ boardQuality.addEventListener('change', function() {
 form.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(form);
-    console.log(getBoard(formData));
+    const snowboard = getBoard(formData);
+    snowboardsApi.save(snowboard);
 });
