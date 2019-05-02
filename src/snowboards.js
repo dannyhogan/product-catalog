@@ -24,7 +24,7 @@ for(let i = 0; i < snowboards.length; i++) {
 
     // Creates TD cell and sets the text content
     const lengthCell = document.createElement('td');
-    lengthCell.textContent = snowboard.boardLength;
+    lengthCell.textContent = snowboard.boardLength + ' cm';
     tr.appendChild(lengthCell);
 
     // Creates TD cell and sets the text content
@@ -39,7 +39,7 @@ for(let i = 0; i < snowboards.length; i++) {
    
     // Creates TD cell and sets the text content
     const qualityCell = document.createElement('td');
-    qualityCell.textContent = snowboard.boardQuality;
+    qualityCell.textContent = snowboard.boardQuality + '/10';
     tr.appendChild(qualityCell);
    
     // Creates TD cell and sets the text content
