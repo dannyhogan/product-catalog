@@ -1,6 +1,13 @@
 function getBoard(formData) {
 
-    const boardWithBindings = formData.get('boardWithBindings') === 'yes';
+    let boardWithBindings = formData.get('boardWithBindings');
+    
+    if(boardWithBindings) {
+        boardWithBindings = 'Yes';
+    } else {
+        boardWithBindings = 'No';
+    }
+
     const boardQuality = parseInt(formData.get('boardQuality'));
 
     // Creates an object based off the formData passed into the function
