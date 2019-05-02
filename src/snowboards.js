@@ -68,3 +68,9 @@ function makeBrandCell(brand) {
 
     return brandCell;
 }
+
+function makeTextCell(board) {
+    const newCell = document.createElement('td');
+    newCell.textContent = board;
+    return newCell;
+}
