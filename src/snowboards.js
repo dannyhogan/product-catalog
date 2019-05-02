@@ -9,12 +9,11 @@ const snowboards = snowboardsApi.getAll();
 for(let i = 0; i < snowboards.length; i++) {
     let snowboard = snowboards[i];
 
-    // Creates row for each loop iteration
+    // Creates new row for each loop iteration
     const tr = document.createElement('tr');
     
-    // Creates TD cell and sets the text content
-    const brandCell = document.createElement('td');
-    brandCell.textContent = snowboard.boardBrand;
+    // Creates brand cell and unique URL for each board brand
+    const brandCell = makeBrandCell(snowboard.boardBrand);
     tr.appendChild(brandCell);
 
     // Creates TD cell and sets the text content
@@ -54,4 +53,18 @@ for(let i = 0; i < snowboards.length; i++) {
     
     //Appends the row to the body of the table
     tbody.appendChild(tr);
+}
+
+function makeBrandCell(brand) {
+
+    const brandCell = document.createElement('td');
+    const link = document.createElement('a');
+
+    const searchParams = new URLSearchParams();
+    searchParams.set('brand', brand);
+    link.href = 'board-details.html?' + searchParams.toString();
+    link.textContent = brand;
+    brandCell.appendChild(link);
+
+    return brandCell;
 }
