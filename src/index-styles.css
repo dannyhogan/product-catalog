@@ -1,8 +1,0 @@
-footer img {
-    position: absolute;
-    margin-top: -400px;
-    right: 0;
-    width: 105%;
-    z-index: -1;
-    opacity: .5;
-}
