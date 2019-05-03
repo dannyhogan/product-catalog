@@ -7,14 +7,16 @@ const testStorage = sessionStorage;
 
 test('round trip snowboard detail into localstorage', assert => {
     //Arrange
-    const snowboard = { brand: 'Arbor' };
+    const snowboard1 = { brand: 'Arbor' };
+    const snowboard2 = { brand: 'Burton' };
 
     //Act
-    snowboardsApi.save(snowboard);
-    const result = snowboardsApi.get();
+    snowboardsApi.save(snowboard1);
+    snowboardsApi.save(snowboard2);
+    const result = snowboardsApi.get(snowboard2.brand);
 
     //Assert
-    assert.deepEqual(result, snowboard);
+    assert.deepEqual(result, snowboard2);
 });
 
 
