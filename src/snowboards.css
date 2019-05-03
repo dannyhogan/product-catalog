@@ -44,3 +44,16 @@ button:hover {
     box-shadow: 5px 5px 20px black;
     transition: .5s;
 }
+
+td a {
+    text-decoration: underline;
+    color: white;
+}
+
+td a:hover {
+    text-shadow: 2px 2px 10px white;
+}
+
+td a:visited {
+    color: white;
+}

@@ -8,7 +8,6 @@ function makeBrandCell(brand) {
     link.href = 'board-details.html?' + searchParams.toString();
     link.textContent = brand;
     brandCell.appendChild(link);
-
     return brandCell;
 }
 
