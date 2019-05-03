@@ -1,20 +1,25 @@
 const snowboardsApi = {
-    storage: localStorage,
+    key: 'snowboards',
     // Saves snowboard object to localstorage
     save(snowboard) {
         const snowboards = snowboardsApi.getAll();
         snowboards.push(snowboard);
         const json = JSON.stringify(snowboards);
-        snowboardsApi.storage.setItem('snowboards', json);
+        localStorage.setItem(snowboardsApi.key, json);
     },
-    // Returns snowboard object from localstorage
-    get() {
-        const json = snowboardsApi.storage.getItem('snowboards');
-        const snowboards = JSON.parse(json);
-        return snowboards[0];
+    // Returns snowboard object from localstorage based of brand
+    get(brand) {
+        const snowboards = snowboardsApi.getAll();
+
+        for(let i = 0; i < snowboards.length; i++) {
+            const snowboard = snowboards[i];
+            if(snowboard.boardBrand === brand) {
+                return snowboard;
+            }
+        }
     },
     getAll() {
-        const json = snowboardsApi.storage.getItem('snowboards');
+        const json = localStorage.getItem(snowboardsApi.key);
 
         let snowboards = JSON.parse(json);
         
