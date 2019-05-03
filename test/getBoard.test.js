@@ -9,7 +9,7 @@ test('returns form details in an object based off form', assert => {
         boardType: 'Rocker',
         boardLength: '164',
         boardAge: '1+',
-        boardWithBindings: true,
+        boardWithBindings: 'Yes',
         boardQuality: 10,
         boardStyle: 'Rocker',
         boardDescription: ''
