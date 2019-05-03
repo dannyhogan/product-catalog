@@ -10,8 +10,11 @@ const quality = document.getElementById('quality');
 const style = document.getElementById('style');
 const description = document.getElementById('description');
 
+const searchParams = new URLSearchParams(window.location.search);
+const boardBrand = searchParams.get('brand');
+
 // Gets snowboard values from API and stores in object variable.
-const snowboard = snowboardsApi.get();
+const snowboard = snowboardsApi.get(boardBrand);
 
 // Sets text content the of DD elements equal to each object property value
 brand.textContent = snowboard.boardBrand;

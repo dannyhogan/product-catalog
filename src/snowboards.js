@@ -1,4 +1,5 @@
 import snowboardsApi from './snowboard-api.js';
+import makeBoardCells from './makeBoardCells.js';
 
 const tbody = document.getElementById('snowboards');
 
@@ -9,47 +10,24 @@ const snowboards = snowboardsApi.getAll();
 for(let i = 0; i < snowboards.length; i++) {
     let snowboard = snowboards[i];
 
-    // Creates row for each loop iteration
+    // Creates new row for each loop iteration
     const tr = document.createElement('tr');
+    const brandCell = makeBoardCells.makeBrandCell(snowboard.boardBrand);
+    const typeCell = makeBoardCells.makeTextCell(snowboard.boardType);
+    const lengthCell = makeBoardCells.makeTextCell(snowboard.boardLength + ' cm');
+    const ageCell = makeBoardCells.makeTextCell(snowboard.boardAge);
+    const boardWithBindingsCell = makeBoardCells.makeTextCell(snowboard.boardWithBindings);
+    const qualityCell = makeBoardCells.makeTextCell(snowboard.boardQuality + '/10');
+    const styleCell = makeBoardCells.makeTextCell(snowboard.boardStyle);
+    const descriptionCell = makeBoardCells.makeTextCell(snowboard.boardDescription);
     
-    // Creates TD cell and sets the text content
-    const brandCell = document.createElement('td');
-    brandCell.textContent = snowboard.boardBrand;
     tr.appendChild(brandCell);
-
-    // Creates TD cell and sets the text content
-    const typeCell = document.createElement('td');
-    typeCell.textContent = snowboard.boardType;
     tr.appendChild(typeCell);
-
-    // Creates TD cell and sets the text content
-    const lengthCell = document.createElement('td');
-    lengthCell.textContent = snowboard.boardLength;
     tr.appendChild(lengthCell);
-
-    // Creates TD cell and sets the text content
-    const ageCell = document.createElement('td');
-    ageCell.textContent = snowboard.boardAge;
     tr.appendChild(ageCell);
-   
-    // Creates TD cell and sets the text content
-    const boardWithBindingsCell = document.createElement('td');
-    boardWithBindingsCell.textContent = snowboard.boardWithBindings;
     tr.appendChild(boardWithBindingsCell);
-   
-    // Creates TD cell and sets the text content
-    const qualityCell = document.createElement('td');
-    qualityCell.textContent = snowboard.boardQuality;
     tr.appendChild(qualityCell);
-   
-    // Creates TD cell and sets the text content
-    const styleCell = document.createElement('td');
-    styleCell.textContent = snowboard.boardStyle;
     tr.appendChild(styleCell);
-   
-    // Creates a new TD cell and sets the text content
-    const descriptionCell = document.createElement('td');
-    descriptionCell.textContent = snowboard.boardDescription;
     tr.appendChild(descriptionCell);
     
     //Appends the row to the body of the table
