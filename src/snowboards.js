@@ -1,4 +1,5 @@
 import snowboardsApi from './snowboard-api.js';
+import makeBoardCells from './makeBoardCells.js';
 
 const tbody = document.getElementById('snowboards');
 
@@ -11,52 +12,24 @@ for(let i = 0; i < snowboards.length; i++) {
 
     // Creates new row for each loop iteration
     const tr = document.createElement('tr');
+    const brandCell = makeBoardCells.makeBrandCell(snowboard.boardBrand);
+    const typeCell = makeBoardCells.makeTextCell(snowboard.boardType);
+    const lengthCell = makeBoardCells.makeTextCell(snowboard.boardLength + ' cm');
+    const ageCell = makeBoardCells.makeTextCell(snowboard.boardAge);
+    const boardWithBindingsCell = makeBoardCells.makeTextCell(snowboard.boardWithBindings);
+    const qualityCell = makeBoardCells.makeTextCell(snowboard.boardQuality + '/10');
+    const styleCell = makeBoardCells.makeTextCell(snowboard.boardStyle);
+    const descriptionCell = makeBoardCells.makeTextCell(snowboard.boardDescription);
     
-
-    const brandCell = makeBrandCell(snowboard.boardBrand);
     tr.appendChild(brandCell);
-
-    const typeCell = makeTextCell(snowboard.boardType);
     tr.appendChild(typeCell);
-
-    const lengthCell = makeTextCell(snowboard.boardLength + ' cm');
     tr.appendChild(lengthCell);
-
-    const ageCell = makeTextCell(snowboard.boardAge);
     tr.appendChild(ageCell);
-
-    const boardWithBindingsCell = makeTextCell(snowboard.boardWithBindings);
     tr.appendChild(boardWithBindingsCell);
-   
-    const qualityCell = makeTextCell(snowboard.boardQuality + '/10');
     tr.appendChild(qualityCell);
-   
-    const styleCell = makeTextCell(snowboard.boardStyle);
     tr.appendChild(styleCell);
-   
-    const descriptionCell = makeTextCell(snowboard.boardDescription);
     tr.appendChild(descriptionCell);
     
     //Appends the row to the body of the table
     tbody.appendChild(tr);
-}
-
-function makeBrandCell(brand) {
-
-    const brandCell = document.createElement('td');
-    const link = document.createElement('a');
-
-    const searchParams = new URLSearchParams();
-    searchParams.set('brand', brand);
-    link.href = 'board-details.html?' + searchParams.toString();
-    link.textContent = brand;
-    brandCell.appendChild(link);
-
-    return brandCell;
-}
-
-function makeTextCell(board) {
-    const newCell = document.createElement('td');
-    newCell.textContent = board;
-    return newCell;
 }
